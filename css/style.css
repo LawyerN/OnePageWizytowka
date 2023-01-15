@@ -1,0 +1,67 @@
+:root{
+    --main-color:#38B7EB;
+    --second-color:#2876D4;
+    --button-color1:#28D0D4;
+    --button-color2:#2FF6C2;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  font-size: 62.5%;
+}
+
+.container{
+    height: 100%;
+}
+/*NAVBAR*/
+.navbar{
+    width:100%;
+    height:10rem;
+    background: var(--second-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   justify-content: flex-end;
+  
+
+}
+
+.button{
+    width: 5rem;
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+i{
+    font-size: 1.75rem;
+}
+.space{
+    width: 5%;
+}
+
+@media screen and (min-width:500px) {
+
+    .button{
+        width: 7rem;
+        font-size: 1.5rem;
+    }
+    
+}
+/*NAVBAR-END*/
+
+/*CONTENT*/
+
+    /*SLIDER*/
+       .slider{
+        width: 100%;
+        height: 35rem;
+       }
+    /*SLIDER-END*/
+
+    /*INFO*/
+
+
+/*CONTENT-END*/
