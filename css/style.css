@@ -55,139 +55,139 @@ i{
 /*CONTENT*/
 
     /*SLIDER*/
-       .slider{
-        width: 100%;
-        height: 35rem;
-       }
-
-       .carousel{
-        margin-left: 15%;
-        margin-right: 15%;
-       }
-
-       ul.slides{
-        display: block;
-        position: relative;
-        height: 500px;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        list-style: none;
-       }
-
-       .slides *{
-        user-select: none;
-        -ms-user-select: none;
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        -webkit-touch-callout:none;
-       }
-
-       ul.slides input{
-        display: none;
-       }
-
-       .slide-container{
-        display: block;
-       }
-
-       .slide-image{
-        display: block;
+    .visuallyhidden {
         position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
+        z-index: -1;
+        right: 0;
         opacity: 0;
-        transition: all .7s ease-in-out;
-       }
-
-       .slide-image img{
-        width: auto;
-        min-width: 100%;
-        height: 100%;
-       }
-
-       .carousel-controls {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        font-size: 100px;
-        line-height: 600px;
-        color: #fff;
-       }
-
-       .carousel-controls label{
-        display: none;
-        position: absolute;
-        padding: 0 20px;
-        opacity: 0;
-        transition: opacity .2s;
-        cursor: pointer;
-       }
-
-       .slide-image:hover + .carousel-controls label{
-        opacity: 0.5;
-       }
-
-       .carousel-controls label:hover{
-        opacity: 1;
-       }
-
-       .carousel-controls .prev-slide{
-        width: 49%;
-        text-align: left;
-        left: 0;
-       }
-
-       .carousel-controls .next-slides{
-        width: 49%;
-        text-align: right;
-        right: 0;
-       }
-
-       .carousel-dots{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 20px;
-        z-index: 999;
+        
+      }
+      
+      h1 {
+        color: white;
         text-align: center;
-
-       }
-
-       .carousel-dots .carousel-dots{
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #fff;
-        opacity: 0.5;
-        margin: 10px;
-       }
-
-       input:checked + .slide-container .slide-image{
-        opacity: 1;
-        transform: scale(1);
-        transition: opacity in ease-in-out;
-       }
-
-       input:checked + .slide-container .carousel-controls label{
+        margin-top: 1em;
+      }
+      
+      .container {
+        overflow: hidden;
+        padding: 20px;
+        margin-top: 2em;
+        background: rgba(0,0,0,.1)
+      }
+      
+      .card-carousel {
+        --card-width: 80%;
+        --card-max-width: 280px;
+        --card-height: 350px;
+        --carousel-min-width: 600px;
+        z-index: 1;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: var(--card-height);
+        min-width: var(--carousel-min-width);
+        transition: filter .3s ease;
+      }
+      
+      @media screen and (max-width: 640px) {
+        .card-carousel {
+          margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+        }
+      }
+      
+      .card-carousel.smooth-return {
+        transition: all .2s ease;
+      }
+      
+      .card-carousel .card {
+        background: whitesmoke;
+        width: var(--card-width);
+        max-width: var(--card-max-width);
+        text-align: center;
+        padding: 1em;
+        min-width: 250px;
+        height: var(--card-height);
+        position: absolute;
+        margin: 0 auto;
+        color: rgba(0,0,0,.5);
+        transition: inherit;
+        -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        border-radius: 1em;
+        filter: brightness(.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .card.highlight {
+        filter: brightness(1)
+      }
+      
+      
+      .card:nth-of-type(1) .image-container {
+          background-image: url("https://static.addtoany.com/images/dracaena-cinnabari.jpg");
+      }
+       
+      .card:nth-of-type(2) .image-container {
+        background-image: url("https://www.w3schools.com/w3css/img_lights.jpg")
+      }
+      
+      .card:nth-of-type(3) .image-container {
+        background-image: url("https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+      }
+      .card:nth-of-type(4) .image-container {
+        background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+      }
+      .card:nth-of-type(5) .image-container {
+        background-image: url("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg")
+      }
+      
+      
+      
+      .image-container {
+        width: 8em;
+        height: 8em;
+        position: relative;
+        background-size: cover;
+        margin-bottom: 2em;
+        border-radius: 100%;
+        padding: 1em;
+        -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+      -moz-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+      box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+        
+      }
+      
+      .image-container::after {
+        content: "";
         display: block;
-       } 
-
-       input #img-1:checked ~ .carousel-dots label#img-dot-1,
-       input #img-2:checked ~ .carousel-dots label#img-dot-2,
-       input #img-3:checked ~ .carousel-dots label#img-dot-3,
-       input #img-4:checked ~ .carousel-dots label#img-dot-4,
-       input #img-5:checked ~ .carousel-dots label#img-dot-5,
-       input #img-6:checked ~ .carousel-dots label#img-dot-6 {
-        opacity: 1;
-       }
-       input:checked + .slide-container .nav label {display: block;}
-
+        width: 120%;
+        height: 120%;
+        border: solid 3px rgba(0,0,0,.1);
+        border-radius: 100%;
+        position: absolute;
+        top: calc(-10% - 3px);
+        left: calc(-10% - 3px);
+      }
+      
+      h2 {
+        padding: 1em;
+        margin-top: 1em;
+        background: rgba(0,0,0,.3);
+        text-align: center;
+        color: white;
+        border-radius: .2em;
+        display: inline-block;
+        transform: translateX(calc((100vw - 100%) / 2))
+      }
+      
+      h2 a {
+        color: #f5b916
+      }
 
 
 

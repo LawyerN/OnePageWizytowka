@@ -40,59 +40,39 @@
         ></path>
       </svg>
       <div>
-        <div class="carousel">
-          <ul class="slides">
-            <input type="radio" name="radio-buttons" id="img-1" checked />
-            <li class="slide-container">
-              <div class="slide-image">
-                <img src="img1.png" />
-              </div>
-              <div class="carousel-controls">
-                <label for="img-3" class="prev-slide">
-                  <span>&lsaquo;</span>
-                </label>
-                <label for="img-2" class="next-slide">
-                  <span>&rsaquo;</span>
-                </label>
-              </div>
-            </li>
-            <input type="radio" name="radio-buttons" id="img-2" />
-            <li class="slide-container">
-              <div class="slide-image">
-                <img src="2.png" />
-              </div>
-              <div class="carousel-controls">
-                <label for="img-1" class="prev-slide">
-                  <span>&lsaquo;</span>
-                </label>
-                <label for="img-3" class="next slide">
-                  <span> &rsaquo;</span>
-                </label>
-              </div>
-            </li>
+       
+ 
+        <h1>Drag the cards to move them</h1>
 
-            <input type="radio" name="radio-buttons" id="img-3" />
-            <li class="slide-container">
-              <div class="slide-image">
-                <img src="3.png" />
-              </div>
-              <div class="carousel-controls">
-                <label for="img-2" class="prev-slide">
-                  <span>&lsaquo;</span>
-                </label>
-                <label for="img-1" class="next-slide">
-                  <span>&rsaquo;;</span>
-                </label>
-              </div>
-            </li>
+<div class="container">
+  <div class="card-carousel">
+    <div class="card" id="1">
+      <div class="image-container"></div>
+      <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+    </div>
+    <div class="card" id="2">
+      <div class="image-container"></div>
+      <p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+    </div>
+    <div class="card" id="3">
+      <div class="image-container"></div>
+      <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+    </div>  
+    <div class="card" id="4">
+      <div class="image-container"></div>
+      <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+    </div>
+    <div class="card" id="5">
+      <div class="image-container"></div>
+      <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+    </div>
+  </div>
+  <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
+</div>
 
-            <div class="carousel-dots">
-              <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-              <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-              <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
-            </div>
-          </ul>
-        </div>
+
+
+
       </div>
       <div class="info-all">
         <div class="info">
@@ -122,5 +102,6 @@
         </div>
       </div>
     </div>
+    <script src = "app.js"> </script>
   </body>
 </html>
