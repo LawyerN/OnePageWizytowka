@@ -15,40 +15,40 @@ body{
 }
 /*NAVBAR*/
 .navbar{
-    width:100%;
-    height:10rem;
-    background: var(--second-color);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-   justify-content: flex-end;
-  
+  width:100%;
+  height:10rem;
+  background: var(--second-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ justify-content: flex-end;
+
 
 }
 
 .button{
-    width: 5rem;
-    font-size: 1rem;
+  width: 5rem;
+  font-size: 1rem;
 }
 
 a{
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 i{
-    font-size: 1.75rem;
+  font-size: 1.75rem;
 }
 .space{
-    width: 5%;
+  width: 5%;
 }
 
 @media screen and (min-width:500px) {
 
-    .button{
-        width: 7rem;
-        font-size: 1.5rem;
-    }
-    
+  .button{
+      width: 7rem;
+      font-size: 1.5rem;
+  }
+  
 }
 /*NAVBAR-END*/
 
@@ -63,13 +63,8 @@ i{
         
       }
       
-      h1 {
-        color: white;
-        text-align: center;
-        margin-top: 1em;
-      }
-      
-      .container {
+   
+      .container-1 {
         overflow: hidden;
         padding: 20px;
         margin-top: 2em;
@@ -196,66 +191,97 @@ i{
 
     /*INFO*/
     .info-all{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-    .info{
-        grid-area: info;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2,1fr);
-        grid-template-areas: ". info"
-        "animation text";
-        width: 50%;
-    }
-    .info-header{
-        grid-area: info;
-    }
-    .info-text{
-        grid-area: text;
-    }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .info-bg1{
+      background: var(--main-color);
+  }
+
+  .info-bg2{
+      background: #005DB6;
+  }
+  .info{
+      grid-area: info;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows:0.5fr,1fr;
+      grid-template-areas: ". info"
+      "animation text";
+      width: 100%;
+  }
+  .info-header{
+      grid-area: info;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 2rem;
+
+  }
+  .info-text{
+      grid-area: text;
+      font-size: 1rem;
+
+  }
+
+  .animation{
+      grid-area: animation;
+      width: 5rem;
+      height: 5rem;
+      background: greenyellow;
+      animation-name: animation;
+      animation-duration: 4s;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-out;
+      animation-direction:alternate;
+      
+  }
+
+  @keyframes animation{
+      0%{
+          transform: scale(1);
+          width: 5rem;
+          height: 5rem;
+          background: greenyellow;
+      }
+
+      25%{
+          transform: rotate(45deg);
+          background: var(--button-color2);
+          border-radius: 50%;
+      }
+
+      50%{
+          transform: rotate(45deg);
+          background: #28D0D4;
+          border-radius: 100%;
+      }
+
+      100%{
+          transform: rotate(0deg);
+      }
+  }
+
+  @media screen and (min-width:500px) {
 
     .animation{
-        grid-area: animation;
-        width: 4rem;
-        height: 4rem;
-        background: greenyellow;
-        animation-name: animation;
-        animation-duration: 4s;
-        animation-delay: 1s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-out;
-        animation-direction:alternate;
-        
+      margin-left: 50%;
     }
-
-    @keyframes animation{
-        0%{
-            transform: scale(1);
-            width: 4rem;
-            height: 4rem;
-            background: greenyellow;
-        }
-
-        25%{
-            transform: rotate(45deg);
-            background: var(--button-color2);
-            border-radius: 50%;
-        }
-
-        50%{
-            transform: rotate(45deg);
-            background: #28D0D4;
-            border-radius: 100%;
-        }
-
-        100%{
-            transform: rotate(0deg);
-        }
-    }
+      
+  }
     /*INFO-END*/
 
 
 
 /*CONTENT-END*/
+
+/*FOOTER*/
+footer{
+  width: 100%;
+  height: 10rem;
+  background: var(--second-color);
+}
+
+/*FOOTER-END*/
