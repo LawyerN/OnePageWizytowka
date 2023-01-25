@@ -74,7 +74,7 @@ a{
   font-size: 5rem;
 }
 .introduction-text{
-  font-size: 1.4rem;
+  font-size: 2.5rem;
 }
 /*INTODRUCTION-END*/
 
@@ -150,7 +150,7 @@ a{
       
       
       .card:nth-of-type(1) .image-container {
-          background-image: url("https://static.addtoany.com/images/dracaena-cinnabari.jpg");
+          background-image: url("https://www.racefans.net/wp-content/uploads/2020/11/201114-Hamilton-7xchampion-1920x1280-1.jpg");
       }
        
       .card:nth-of-type(2) .image-container {
