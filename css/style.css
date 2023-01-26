@@ -75,7 +75,7 @@ a{
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
-  height: 32rem;
+  height: 42rem;
   background: var(--second-color);
 }
 
@@ -88,13 +88,21 @@ a{
   font-size: 2.5rem;
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width:700px) {
 
  .introduction{
-  height: 17rem;
-  
+  height: 24rem;
 }
 }
+
+
+@media screen and (min-width:360px) and (max-width: 800px){
+
+  .introduction{
+   height: 32rem;
+   
+ }
+ }
 /*INTODRUCTION-END*/
 
 /*CONTENT*/
@@ -118,7 +126,7 @@ a{
       
       .card-carousel {
         --card-width: 80%;
-        --card-max-width: 280px;
+        --card-max-width: 380px;
         --card-height: 350px;
         --carousel-min-width: 600px;
         z-index: 1;
@@ -180,7 +188,7 @@ a{
         background-image: url("https://i.iplsc.com/1/000A3TCZ9JY741QN-C321-F4.jpg")
       }
       .card:nth-of-type(4) .image-container {
-        background-image: url("https://img.a.transfermarkt.technology/portrait/big/177907-1663841733.jpg?lm=1")
+        background-image: url("https://i2-prod.football.london/incoming/article24750003.ece/ALTERNATES/s1200b/0_Manchester-United-captain-Harry-Maguire.jpg")
       }
       .card:nth-of-type(5) .image-container {
         background-image: url(" https://s.lubimyczytac.pl/upload/authors/58013/207994-352x500.jpg ")
@@ -249,7 +257,7 @@ a{
       background: #005DB6;
   }
   .info{
-    height: 25rem;
+    height: 40rem;
       grid-area: info;
       display: grid;
       grid-template-columns: repeat(2,1fr);
@@ -257,6 +265,9 @@ a{
       grid-template-areas: ". info"
       "animation text";
       width: 100%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+     
   }
   .info-header{
       grid-area: info;
@@ -284,6 +295,12 @@ a{
       animation-timing-function: ease-out;
       animation-direction:alternate;
       
+  }
+
+  .info-img{
+    grid-area: animation;
+    width: 10rem;
+
   }
 
   @keyframes animation{
@@ -316,7 +333,26 @@ a{
     .animation{
       margin-left: 50%;
     }
+
+    .info{
+      height: 30rem;
+    }
+
+    .info-img{
+      margin-left: 10rem;
+    }
       
+  }
+
+
+  @media screen and (min-width:1200px) {
+
+    .info-img{
+      margin-left: 20rem;
+    }
+
+
+
   }
     /*INFO-END*/
 
