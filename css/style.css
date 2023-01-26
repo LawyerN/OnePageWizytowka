@@ -5,6 +5,16 @@
     --button-color2:#2FF6C2;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
 body{
   font-family: 'Inter', sans-serif;
   font-size: 62.5%;
