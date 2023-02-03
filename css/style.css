@@ -4,10 +4,15 @@
     --button-color1:#28D0D4;
     --button-color2:#2FF6C2;
 
-    --gradient: linear-gradient(
-      90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 47%, rgba(2,176,232,1) 100%, rgba(0,212,255,1) 100%
-    );
+    --gradient:  linear-gradient(90deg, rgba(4, 66, 191, 1) 0%, rgba(4, 32, 191, 1) 25%, rgba(6, 86, 191, 1) 50%, rgba(31, 67, 115, 1) 75%);
+  --gradient2: linear-gradient(90deg, rgba(107, 23, 15, 1) 0%, rgba(235, 50, 33, 1) 61%);
+   --color1: #0420BF; 
+   --color2: #0442BF; 
+   --color3: #0656BF; 
+   --color4: #1F4373; 
+   --color5: #BF1304; 
 }
+
 
 
 html {
@@ -16,8 +21,15 @@ html {
 
 
 
+@keyframes bg-animation {
+  0% {background-position: left;}
+  100%{background-position: right;}
+}
 
-
+@keyframes bg-animation2 {
+  0% {background-position: right;}
+  100%{background-position: left;}
+}
 
 body{
   font-family: 'Inter', sans-serif;
@@ -31,12 +43,12 @@ body{
 .navbar{
   width:100%;
   height:3rem;
-  background: var(--second-color);
-
-  display: flex;
+  background: var(--color3);
+  display: grid;
   flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
+  grid-template-columns:60% 40% ;
+  grid-template-areas: "logo buttons";
+  grid-template-rows: 10vh;
   background-image: var(--gradient);
   background-size: 400%;
   animation: bg-animation 5s infinite alternate;
@@ -58,10 +70,11 @@ li{
 }
 
 .nav-menu{
+  grid-area: buttons;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
+ 
 }
 
 .hamburger{
@@ -77,6 +90,7 @@ li{
   -webkit-transition: all 0.3s ease-in-out ;
   transition: all 0.3s ease-in-out;
   background-color: white;
+  margin-left: 85%;
 
 }
 
@@ -96,20 +110,19 @@ li{
   .nav-menu{
     position: fixed;
     left: -110%; 
-    top: 70px;
+    top: 15px;
     gap: 0;
     flex-direction: column;
     background-image: var(--gradient);
     background-size: 400%;
     animation: bg-animation 5s infinite alternate;
-
     width: 100%;
     text-align: center;
     transition: 0.3s;
 
    
   }
-  nav-item{
+  nav-item{   /*?*/
     margin: 200px 80px;
   }
 
@@ -120,9 +133,7 @@ li{
 
 
 .button:hover{
- 
- 
-  color: var(--button-color2);
+  color: var(--color2);
   font-size: 2rem;
 }
 
@@ -131,10 +142,50 @@ a{
   color: white;
 }
 
+.button-special{
+  display: flex;
+  flex-direction: row;
+  width: 10rem;
+  height: 4rem;
+  background-image: var(--gradient2);
+  background-size: 400%;
+  animation: bg-animation 5s infinite alternate;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.8s;
+  -webkit-box-shadow: 3px -11px 41px -17px rgba(66, 68, 90, 1);
+-moz-box-shadow: 3px -11px 41px -17px rgba(66, 68, 90, 1);
+box-shadow: 3px -11px 41px -17px rgba(66, 68, 90, 1);
+}
+
+.b{
+    margin-left: 0.2rem;
+}
+
+.button-special:hover{
+  color: black;
+  border-radius: 30px;
+}
+
+.button-special:hover .b{
+  margin-left: 0.4rem;
+  font-size: larger;
+}
 
 .space{
   width: 5%;
 }
+
+.logofoto{
+  grid-area: logo;
+  width: 10rem;
+  border-radius: 100%;
+  z-index: 9999;
+  
+}
+
 
 @media screen and (min-width:500px) {
 
@@ -142,7 +193,13 @@ a{
       width: 7rem;
       font-size: 1.5rem;
   }
-  
+}
+
+@media(max-width:768px){
+  .logofoto{
+    width: 8rem;
+    
+  }
 }
 /*NAVBAR-END*/
 
@@ -150,7 +207,8 @@ a{
 .introduction{
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 42rem;
   background-image: var(--gradient);
@@ -158,10 +216,6 @@ a{
   animation: bg-animation 5s infinite alternate;
 }
 
-@keyframes bg-animation {
-  0% {background-position: left;}
-  100%{background-position: right;}
-}
 
 .introduction-header{
   margin-top: 0;
@@ -192,136 +246,7 @@ a{
 /*CONTENT*/
 
     /*SLIDER*/
-    .visuallyhidden {
-        position: absolute;
-        z-index: -1;
-        right: 0;
-        opacity: 0;
-        
-      }
-      
    
-      .container-1 {
-        overflow: hidden;
-        padding: 20px;
-        margin-top: 2em;
-       
-      }
-      
-      .card-carousel {
-        --card-width: 80%;
-        --card-max-width: 380px;
-        --card-height: 350px;
-        --carousel-min-width: 600px;
-        z-index: 1;
-        position: relative;
-        margin: 0 auto;
-        width: 100%;
-        height: var(--card-height);
-        min-width: var(--carousel-min-width);
-        transition: filter .3s ease;
-      }
-      
-      @media screen and (max-width: 640px) {
-        .card-carousel {
-          margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
-        }
-      }
-      
-      .card-carousel.smooth-return {
-        transition: all .2s ease;
-      }
-      
-      .card-carousel .card {
-        background: whitesmoke;
-        width: var(--card-width);
-        max-width: var(--card-max-width);
-        text-align: center;
-        min-width: 250px;
-        height: var(--card-height);
-        position: absolute;
-        margin: 0 auto;
-        color: rgba(0,0,0,.5);
-        transition: inherit;
-        -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-        -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-        border-radius: 1em;
-        filter: brightness(.9);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
-      }
-      
-      .card.highlight {
-        filter: brightness(1)
-      }
-      
-      
-      .card:nth-of-type(1) .image-container {
-          background-image: url("https://www.racefans.net/wp-content/uploads/2020/11/201114-Hamilton-7xchampion-1920x1280-1.jpg");
-      }
-       
-      .card:nth-of-type(2) .image-container {
-        background-image: url("https://ecsmedia.pl/c/mr-bad-guy-b-iext122720338.jpg")
-      }
-      
-      .card:nth-of-type(3) .image-container {
-        background-image: url("https://i.iplsc.com/1/000A3TCZ9JY741QN-C321-F4.jpg")
-      }
-      .card:nth-of-type(4) .image-container {
-        background-image: url("https://i2-prod.football.london/incoming/article24750003.ece/ALTERNATES/s1200b/0_Manchester-United-captain-Harry-Maguire.jpg")
-      }
-      .card:nth-of-type(5) .image-container {
-        background-image: url(" https://s.lubimyczytac.pl/upload/authors/58013/207994-352x500.jpg ")
-      }
-      
-      
-      
-      .image-container {
-        width: 10em;
-        height: 10em;
-        font-size: 1rem;
-        position: relative;
-        background-size: cover;
-        margin-bottom: 2em;
-        border-radius: 100%;
-        padding: 1em;
-        -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
-      -moz-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
-      box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
-        
-      }
-      
-      .image-container::after {
-        content: "";
-        display: block;
-        width: 120%;
-        height: 120%;
-        border: solid 3px rgba(0,0,0,.1);
-        border-radius: 100%;
-        position: absolute;
-        top: calc(-10% - 3px);
-        left: calc(-10% - 3px);
-      }
-      
-      h2 {
-        padding: 1em;
-        margin-top: 1em;
-        background: rgba(0,0,0,.3);
-        text-align: center;
-        color: white;
-        border-radius: .2em;
-        display: inline-block;
-        transform: translateX(calc((100vw - 100%) / 2))
-      }
-      
-      h2 a {
-        color: #f5b916
-      }
-
 
 
 
