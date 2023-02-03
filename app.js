@@ -319,3 +319,11 @@ class CardCarousel extends DraggingEvent {
 } 
 
 const carousel = new CardCarousel(cardsContainer)
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+hamburger.addEventListener("click", () =>{
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+})
+
