@@ -5,21 +5,34 @@
     --button-color2:#274001;
     --color:#F2F2F2;
 }
+
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
 html{
   /*62.5% of 16px = 10px*/
   font-size: 62.5%;
   font-family: 'Poppins', bold;
- 
-
 }
+
+
+
+
 /*BLocks*/
 .block{
   width: 100%;
   height: 70rem;
+  padding: 0 10rem;
 }
+
+
 .block-skewed{
-  background-color: #A2A685;
   clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 85%);
+}
+
+.block-color{
+  background-color: #A2A685;
 }
 
 /*Navbar*/
@@ -66,12 +79,31 @@ html{
 
 .grid .learn-more{
   margin-left: 5rem;
-  padding-top: 6rem;
- 
 }
 img{
   width: 100%;
-  
+  min-width: 300px;
 }
 
 
+@media screen and (max-width: 500px) {
+
+  .grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid .learn-more{
+    margin-left: auto;
+  }
+  .block{
+    height: 60rem;
+  }
+
+  img{
+    display: inline-block;
+    position: absolute;
+    top:230px;
+  }
+}
