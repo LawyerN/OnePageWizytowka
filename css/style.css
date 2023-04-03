@@ -20,10 +20,12 @@ height: 70rem;
 .block-skewed{
 background-color: #A2A685;
 clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 85%);
+
 }
 
 .block_header{
   font-size: 5rem;
+  
 }
 
 .block_text{
@@ -53,8 +55,12 @@ clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 85%);
 
 }
 
+
+
 .navbar{
 display: flex;
+overflow: hidden;
+position: relative;
 flex-direction: row;
 background-color: #A2A685;
 height: 10rem;
@@ -103,6 +109,7 @@ margin-bottom: 4px;
     text-align: center;
     display: none;
     
+    
   }
 
   .btn{
@@ -118,13 +125,20 @@ margin-bottom: 4px;
     top:10px;
     cursor: pointer;
     
+    
   }
 
   .active{
     display: block; 
+    
   }
   .logo{
-    display: none;
+    display: block;
+    position: absolute;
+   left: 15px;
+    top:10px;
+    cursor: pointer;
+    width: 6%;
   }
 
   .block{
@@ -175,6 +189,8 @@ width: 100%;
 
 
 }
+
+
 
 /*media dla tego co jest pod navbarem*/
 
