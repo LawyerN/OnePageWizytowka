@@ -13,21 +13,22 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <section class="navbar">
-      <img src="images/logo.svg" alt="" class="logo" />
-     <div class="nav-list" id="nav-list">
-      <div class="btn">button1</div>
-      <div class="btn">button2</div>
-      <div class="btn">button3</div>
-      <div class="btn">button4</div>
-     </div>
-      
-      
+    <section id="navbar" class="navbar">
+      <img src="images/logo-lepsze.png" alt="" class="logo" />
+      <div class="nav-list" id="nav-list">
+        <div class="btn">button1</div>
+        <div class="btn">button2</div>
+        <div class="btn">button3</div>
+        <div class="btn">button4</div>
+      </div>
       <div class="space2"></div>
       <div class="menu" id="toggle-button">
         <div class="menu-line"></div>
@@ -35,15 +36,12 @@
         <div class="menu-line"></div>
       </div>
       <div class="space"></div>
-
-      
-
     </section>
     <section class="block block-skewed">
       <div class="grid grid_1x2">
-        <div class="learn-more">
-          <h2>Lorem, ipsum dolor.</h2>
-          <p>
+        <div>
+          <h2 class="block_header">Lorem, ipsum dolor.</h2>
+          <p class="block_text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
             ipsum!
           </p>
@@ -53,12 +51,13 @@
     </section>
   </body>
   <script>
-    const toggleButton = document.getElementById('toggle-button');
-    const naviList = document.getElementById('nav-list');
+    const toggleButton = document.getElementById("toggle-button");
+    const naviList = document.getElementById("nav-list");
+    const navbar = document.getElementById("navbar");
 
-    toggleButton.addEventListener('click', ()=>{
-      naviList.classList.toggle('active');
-    })
+    toggleButton.addEventListener("click", () => {
+      naviList.classList.toggle("active");
+      navbar.classList.toggle("active");
+    });
   </script>
-
 </html>
