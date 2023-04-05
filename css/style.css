@@ -74,6 +74,11 @@ flex-direction: row;
 
 }
 
+ul {
+  list-style-type: none;
+}
+
+
 .space{
 width: 16%;
 }
@@ -124,6 +129,7 @@ margin-bottom: 4px;
     right:15px ;
     top:10px;
     cursor: pointer;
+    
     
     
   }
