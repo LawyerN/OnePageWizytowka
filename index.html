@@ -19,32 +19,30 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <header>
-    <nav id="navbar" class="navbar">
-      <img src="images/logo-lepsze.png" alt="" class="logo" />
-      <div class="menu" id="toggle-button">
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-      </div>
-      
-      <ul class="nav-list" id="nav-list">
-        <li class="btn">button1</li>
-        <li class="btn">button2</li>
-        <li class="btn">button3</li>
-        <li class="btn">button4</li>
+    <nav class="nav collapsible">
+      <a class="nav__brand" href="/"
+        ><img src="images/logo-lepsze.png" alt=""
+      /></a>
+      <svg class="icon nav__toggler">
+        <use xlink:href="images/sprite.svg#menu"></use>
+      </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="nav__item"><a href="#">Hosting</a></li>
+        <li class="nav__item"><a href="#">VPS</a></li>
+        <li class="nav__item"><a href="#">Domain</a></li>
+        <li class="nav__item"><a href="#">Pricing</a></li>
       </ul>
-      <div class="space2"></div>
-      
-      <div class="space"></div>
     </nav>
-  </header>
+
     <section class="block block-skewed">
       <div class="grid grid_1x2">
-        <div >
+        <div>
           <h2 class="block_header">Lorem, ipsum dolor.</h2>
           <p class="block_text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
@@ -56,13 +54,18 @@
     </section>
   </body>
   <script>
-    const toggleButton = document.getElementById("toggle-button");
+    const collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach((item) =>
+      item.addEventListener("click", function () {
+        this.classList.toggle("collapsible--expanded");
+      })
+    );
+    /*const toggleButton = document.getElementById("toggle-button");
     const naviList = document.getElementById("nav-list");
     const navbar = document.getElementById("navbar");
 
     toggleButton.addEventListener("click", () => {
       naviList.classList.toggle("active");
-     
-    });
+    });*/
   </script>
 </html>
